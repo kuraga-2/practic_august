@@ -2,8 +2,8 @@ import math
 import turtle 
 
 class Decagon:
-    def __init__(self,side):
-        self.side = int(side)
+    def __init__(self):
+        self.side = float(input("Введите длины стороны декагона - "))
         self.corner = 144
         self.K = float(math.sqrt(5 + 2*math.sqrt(5)))
 
@@ -42,8 +42,12 @@ class Decagon:
 
 
 
-Ncorner = Decagon(100)
-Ncorner.opis_okr()
-Ncorner.vpis_okr()
-Ncorner.S_P_dec()
-Ncorner.risunok()
+def main():
+    decag = Decagon()
+    decag.opis_okr()
+    decag.vpis_okr()
+    decag.S_P_dec()
+    decag.risunok()
+    
+if __name__ == "__main__":
+    main()
